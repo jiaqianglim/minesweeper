@@ -1,23 +1,32 @@
 package game;
 
-public class tile{
+public class Tile{
     
-    private enum DisplayState {hidden, empty, one, two, three, four, five, six, seven, eight, flagged, bomb};
-    private enum Role {empty, bomb};
+    //Display {hidden, empty, flagged, bomb};
+    //Role {empty, bomb};
+    //Value {0,1-8, flagged, bomb}
 
-    private DisplayState displayState;
-    private Role role;
-    
-    public void setRole(Role role) {
+    private String display = "hidden";
+    private String role = "empty";
+    private String value = "0";
+
+    public void setRole(String role){
         this.role = role;
     }
 
-    public String getPosition() {
-        return position;
+	public void setDisplay(String string) {
+        this.display = string;
+	}
+
+    public String getRole(){
+        return this.role;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public String getValue() {
+        return value;
     }
 
+    public void setValue(String value){
+        this.value = value;
+    }
 }
