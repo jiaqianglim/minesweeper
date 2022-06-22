@@ -6,31 +6,18 @@ public class tile{
     private enum Role {empty, bomb};
 
     private DisplayState displayState;
-
     private Role role;
-    private String position;
     
-    public tile(String positiona, Role rolea){
-        this.position = positiona;
-        this.role = rolea;
-
-        this.displayState = DisplayState.hidden;
+    public void setRole(Role role) {
+        this.role = role;
     }
 
-    public DisplayState getDisplayState() {
-        return displayState;
-    }
-
-    public void setDisplayState(DisplayState displayStatea){
-        this.displayState = displayStatea;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public String getName() {
+    public String getPosition() {
         return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 
 }
